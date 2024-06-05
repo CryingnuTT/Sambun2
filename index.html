@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>로망[Roman]_장수선택툴</title>
+    <link rel="stylesheet" type="text/css" href="./css.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div class="toast" id="max_general_error" style="position: fixed; top: 0; right: 0; z-index: 1000" data-delay=1000>
+        <div class="toast-body alert-danger">
+          <strong>오류</strong> - 6명의 장수만 선택가능합니다.
+        </div>
+    </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="#">로망[Roman] 덱 빌더</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="info">
+        <div class="current">
+            <h1>Version.40</h1>
+            <p>
+                - Chrome(크롬) 브라우저에 최적화 되어있습니다.<br>
+                &nbsp; 다른 브라우저에서는 제대로 보여지지 않을 수 있습니다.<br>
+                - 1.0.77 버전 장수 밸런스 업데이트 적용<br>
+                - 유비 현덕 추가<br>
+                <span>Update Date 2021.10.18</span>
+                <br>
+                <!-- <strong style="color:red">1.0.70버전 이후 업데이트가 늦어져서 죄송합니다</strong><br> -->
+            <a href="./history.html">지난 업데이트 내용 보기</a>
+        </div>
+    </div>
+    
+    <div id="root"></div>
+
+    <div class="result container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="con first">
+                    <h3>장수선택 <button type="button" class="btn btn-outline-danger float-right js_reset">Reset</button></h3>
+                    <ul class="type1">
+                    </ul>
+                </div>
+                <div class="con">
+                    <h3>편성효과</h3>
+                    <ul class="type2">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="con">
+                    <h3>스킬</h3>
+                    <ul class="type3">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
+    <script src="./script.js"></script>
+</body>
+</html>
